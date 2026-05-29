@@ -50,12 +50,9 @@ describe('Call.js', () => {
                 .set('content-type', 'application/x-www-form-urlencoded')
                 .send({
                     password: config.apipassword,
-                    to: '3312345678'
+                    to: '77137669688'
                 })
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.should.to.be.json;
-                    res.body.should.have.property('error').eql('Please post all the informations needed.');
+                .end((err, res) =>res.body.should.have.property('error').eql('Please post all the informations needed.');
                     done();
                 });
         });
@@ -66,7 +63,7 @@ describe('Call.js', () => {
                 .set('content-type', 'application/x-www-form-urlencoded')
                 .send({
                     password: config.apipassword,
-                    to: '3312345678',
+                    to: '7137669688',
                     user: 'test'
                 })
                 .end((err, res) => {
@@ -80,10 +77,13 @@ describe('Call.js', () => {
         it("it should return an ERROR with \"The service wasn't recognised.\" : we sent 3 post data (but bad service)", (done) => {
             chai.request(server)
                 .post('/call')
-                .set('content-type', 'application/x-www-form-urlencoded')
+                .set('content-ty {
+                    res.should.have.status(200);
+                    res.should.to.be.json;
+                    pe', 'application/x-www-form-urlencoded')
                 .send({
                     password: config.apipassword,
-                    to: '3312345678',
+                    to: '7137669688',
                     user: 'test',
                     service: 'test'
                 })
@@ -101,7 +101,7 @@ describe('Call.js', () => {
                 .set('content-type', 'application/x-www-form-urlencoded')
                 .send({
                     password: config.apipassword,
-                    to: '33123',
+                    to: '7137669688',
                     user: 'test',
                     service: 'default'
                 })
@@ -119,7 +119,7 @@ describe('Call.js', () => {
                 .set('content-type', 'application/x-www-form-urlencoded')
                 .send({
                     password: config.apipassword,
-                    to: '2482948449',
+                    to: '7137669688',
                     user: 'test',
                     service: 'default'
                 })
